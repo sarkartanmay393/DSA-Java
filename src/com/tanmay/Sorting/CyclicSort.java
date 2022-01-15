@@ -5,7 +5,7 @@ import java.util.Arrays;
 //Works in (1 to N) Ranged Array.
 public class CyclicSort {
     public static void main(String[] args) {
-        int[] arr = {9,8,7,6,5,4,3,2,1};
+        int[] arr = {1,2,3,4,2};
         cyclicSort(arr);
         System.out.println(Arrays.toString(arr));
     }
