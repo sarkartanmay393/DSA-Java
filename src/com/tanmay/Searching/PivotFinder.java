@@ -2,8 +2,8 @@ package com.tanmay.Searching;
 
 public class PivotFinder {
     public static void main(String[] args) {
-        int[] arr = {2,2,2,2,2,2,2,2,4,9,1,1,2,2};
-//        System.out.println(PivotIdxFinderDuplicates(arr));
+        int[] arr = {1,1,1,1,1,2};
+        System.out.println(PivotIdxFinder(arr));
     }
 
 
