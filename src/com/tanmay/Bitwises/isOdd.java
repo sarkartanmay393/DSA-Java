@@ -1,4 +1,4 @@
-package com.tanmay.Maths;
+package com.tanmay.Bitwises;
 
 public class isOdd {
     public static void main(String[] args) {

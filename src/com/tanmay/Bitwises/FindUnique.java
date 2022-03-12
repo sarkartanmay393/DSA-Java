@@ -1,4 +1,5 @@
-package com.tanmay.Maths;
+package com.tanmay.Bitwises;
+
 
 public class FindUnique {
     public static void main(String[] args) {
@@ -7,7 +8,10 @@ public class FindUnique {
         int[] arr1 = {2,3,4,1,-2,-3,6,-4,-1};
         //System.out.println(SingleDigitUniversal(arr1));
         int[] arr2 = {1,1,1,2,2,2,3,3,3,4};
-        System.out.println(FindUniqueIn3sss(arr2));
+        //System.out.println(FindUniqueIn3sss(arr2));
+        int n = 6;
+        //System.out.println(FindMagicNumber(n));
+
 
     }
 
@@ -53,5 +57,31 @@ public class FindUnique {
         str = str.replaceAll("^0+(?!$)", "");
         return Integer.parseInt(str, 2);
     }
+
+    static int FindMagicNumber(int n){
+        /*
+        StringBuilder binaryRepresentation = new StringBuilder();
+        binaryRepresentation.append(Integer.toBinaryString(n));
+        binaryRepresentation.reverse();
+        int ans = 0;
+        for (int i = 0; i < binaryRepresentation.length(); i++) {
+            ans += ((int)(binaryRepresentation.charAt(i))==48?0:1) *(Math.pow(5,i+1));
+        }
+        return ans;
+        */
+        int ans = 0;
+        int base = 5;
+        while (n > 0) {
+            int last = n & 1;
+            n >>= 1;
+            ans += last * base;
+            base *= 5;
+        }
+        return ans;
+    }
+
+
+
+
 
 }
