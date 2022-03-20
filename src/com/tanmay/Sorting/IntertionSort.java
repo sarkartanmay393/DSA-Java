@@ -21,8 +21,6 @@ public class IntertionSort {
             }
         }
     }
-
-
     static void swap(int[] arr, int firstIdx, int secondIdx) {
         int temp = arr[firstIdx];
         arr[firstIdx] =  arr[secondIdx];
