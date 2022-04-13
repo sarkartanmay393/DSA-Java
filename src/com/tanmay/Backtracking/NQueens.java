@@ -5,7 +5,7 @@ package com.tanmay.Backtracking;
 // Leetcode 51
 public class NQueens {
     public static void main(String[] args) {
-        int n = 100;
+        int n = 10;
         System.out.println(solveNQueens(new boolean[n][n], 0));
 
     }

@@ -5,7 +5,7 @@ public class SieveOfEratosthenes {
             sieve(50);
     }
 
-    //Prime numbers upto N, optimised.
+    // Prime numbers upto N, optimised.
     static void sieve (int n){
         boolean[] notPrimes = new boolean[n+1];
 
