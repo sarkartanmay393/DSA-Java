@@ -5,16 +5,16 @@ import java.util.Arrays;
 public class InsertionSort {
     public static void main(String[] args) {
         int[] arr = {0,-3,-2,-1};
-        Intertion(arr,arr.length);
+        Insertion(arr,arr.length);
         System.out.println(Arrays.toString(arr));
     }
 
-    static void Intertion(int[] arr, int n) {
+    static void Insertion(int[] arr, int n) {
         if(n <= 1)
             return;
-            //base
+            // base
 
-        Intertion(arr, n-1); //recursive call
+        Insertion(arr, n-1); // recursive call.
 
         int lastEle = arr[n-1];
         int i = n-2;
@@ -24,8 +24,7 @@ public class InsertionSort {
             i--;
         }
         arr[i+1] = lastEle;
-            //loop for setting the last ele in correct position in the sorted subarray
-
+            // loop for setting the last ele in correct position in the sorted subarray.
 
     }
 }

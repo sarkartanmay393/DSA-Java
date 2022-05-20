@@ -10,8 +10,8 @@ public class QuickSort {
 
     }
 
-    // Mergesort + Intertion sort
-    // Intertion sort works well with partially sorted array.
+    // Mergesort + Insertion sort
+    // Insertion sort works well with partially sorted array.
     static void hybridSort(int[] arr, int low, int high){
         if(low >= high){
             return;
@@ -28,15 +28,20 @@ public class QuickSort {
                 e--;
             }
             if(s <= e){
-                int tmp = arr[s];
-                arr[s] = arr[e];
-                arr[e] = tmp;
+                swap(arr, s, e);
                 s++; e--;
             }
         }
 
-        //sort call for rest
+        // sort call for rest
         hybridSort(arr, low, e);
         hybridSort(arr, s, high);
     }
+
+    static void swap (int[] arr, int s , int e) {
+        int tmp = arr[s];
+        arr[s] = arr[e];
+        arr[e] = tmp;
+    }
+
 }

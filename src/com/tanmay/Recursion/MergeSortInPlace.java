@@ -10,7 +10,7 @@ public class MergeSortInPlace {
     }
 
     static void mergesort(int[] arr, int s, int e){
-        if(e-s == 1){
+        if(e-s == 1) {
             return;
         }
         int m = s + (e-s)/2;
