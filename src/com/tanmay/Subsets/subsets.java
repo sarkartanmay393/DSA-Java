@@ -7,7 +7,12 @@ import java.util.List;
 public class subsets {
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 2, 3}; System.out.println(subsetsWithDuplicates(arr).toString());
+        int[] arr = {1, 2, 3, 4, 5};
+        for (List<Integer> eachArr : subset(arr)) {
+            if(eachArr.size() == 3) {
+                System.out.println(eachArr.toString());
+            }
+        }
 
 
     }
@@ -17,7 +22,7 @@ public class subsets {
         List<List<Integer>> res = new ArrayList<>();
         res.add(new ArrayList<>());
 
-        for(int num : arr){
+        for (int num : arr) {
             int n = res.size();
             // Inner Lists counter to create 2x Inner lists. Exp : [[], [1]] -> [[],[1],[take],[take]] -> [[],[1],[took],[took],[take],[take],[take],[take]]
             // We use Previous inner lists to reject , and new lists do accept.
@@ -40,9 +45,9 @@ public class subsets {
 
         int s = 0, e = 0; // Pointer to make it easy.
 
-        for(int i=0; i<arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             s = 0;
-            if(i > 0 && arr[i] == arr[i-1]){
+            if (i > 0 && arr[i] == arr[i - 1]) {
                 s = e + 1;
             }
             int n = res.size();
@@ -51,7 +56,7 @@ public class subsets {
                 List<Integer> subset = new ArrayList<>(res.get(j));
                 subset.add(arr[i]);
                 res.add(subset);
-           }
+            }
         }
 
         return res;
