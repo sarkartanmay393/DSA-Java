@@ -11,6 +11,7 @@ public class ContainsDuplicate {
     }
     public static boolean containsDuplicate(int[] nums) {
         HashSet<Integer> helperDatabase = new HashSet<>();
+
         // We could use arraylist too.
         for (int num : nums) {
             if(helperDatabase.contains(num)) {

@@ -6,6 +6,7 @@ public class Tryout {
         String s = "011010"; int minJump = 2, maxJump =3;
         StringBuilder res = new StringBuilder();
 
+        word.
 
 
 
