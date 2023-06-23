@@ -2,7 +2,7 @@ package com.tanmay.Maths;
 
 public class NRM {
     public static void main(String[] args) {
-        System.out.println(sqrt(16));
+        System.out.println(sqrt(64));
         //System.out.println(Math.sqrt(16));
     }
 

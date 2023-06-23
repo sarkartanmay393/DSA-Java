@@ -6,7 +6,7 @@ public class Introduction {
 //        for (double i = 0; i < 315000; i++) {
 //            s1 = new Satellite();
 //        }
-        Satellite as1 = new AdvanceSatellite();
+Satellite as1 = new AdvanceSatellite();
 
     }
 

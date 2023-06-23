@@ -3,8 +3,7 @@ package com.tanmay.Maths;
 public class GCD_LCM {
     public static void main(String[] args) {
 
-        int a = 2, b = 7;
-        System.out.println(gcd(720,150));
+        System.out.println(gcd(2,6));
 
     }
 

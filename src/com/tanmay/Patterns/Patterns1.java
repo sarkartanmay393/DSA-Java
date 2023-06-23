@@ -4,7 +4,7 @@ package com.tanmay.Patterns;
 public class Patterns1 {
     public static void main(String[] args) {
 
-        Pattern12(5);
+        Pattern14(5);
 
     }
 

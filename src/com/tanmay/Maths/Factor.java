@@ -5,7 +5,7 @@ import java.util.ArrayList;
 // Factors of N
 public class Factor {
     public static void main(String[] args) {
-        factorOptimisedV2(192);
+        factorOptimisedV2(12);
     }
 
     // Time Complexity : O(n/2)

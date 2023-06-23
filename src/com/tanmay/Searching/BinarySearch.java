@@ -1,4 +1,4 @@
-package com.tanmay.learn;
+package com.tanmay.Searching;
 
 public class BinarySearch {
     public static void main(String[] args) {

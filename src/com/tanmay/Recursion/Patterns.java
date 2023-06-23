@@ -3,7 +3,7 @@ package com.tanmay.Recursion;
 public class Patterns {
     public static void main(String[] args) {
         int n = 5;
-        int[] arr = {1,3,5,7,9,2,4,6,8};
+        // int[] arr = {1,3,5,7,9,2,4,6,8};
         patterns1(n);
     }
 

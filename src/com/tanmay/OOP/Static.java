@@ -2,8 +2,9 @@ package com.tanmay.OOP;
 
 public class Static {
     public static void main(String[] args) {
-        //helper.innerHelper asdfasd = new helper.innerHelper(3);
-            System.out.println('&' - 0);
+        // helper.innerHelper asdfasd = new helper.innerHelper(3);
+        // helper asdfasd = new helper();
+        System.out.println('&' - 0);
     }
 }
 
