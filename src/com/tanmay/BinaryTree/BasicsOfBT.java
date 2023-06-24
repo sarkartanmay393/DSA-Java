@@ -5,101 +5,90 @@ import java.util.Scanner;
 public class BasicsOfBT {
     public static void main(String[] args) {
 
-        BinaryTree<String> familyTree = new BinaryTree<String>();
+        BinaryTree familyTree = new BinaryTree();
         familyTree.populate(new Scanner(System.in));
-        System.out.println("It\'s time to look our tree...");
-        // familyTree.prettyDisplay();
+        System.out.println("\nIt\'s time to look our tree...");
+        familyTree.display();
+        familyTree.prettyDisplay();
     }
 }
 
-// A binary tree is a rooted tree in which every node has at most two children.
-// I'm making it Generic support.
-class BinaryTree<T> {
+class BinaryTree {
 
     public BinaryTree() {
     }
 
-    private class Node<T> {
-        Object value;
-        Node<T> leftNode;
-        Node<T> rightNode;
+    private class Node {
+        int value;
+        Node leftNode;
+        Node rightNode;
 
-        public Node(Object val) {
+        public Node(int val) {
             this.value = val;
         }
-
-        // @Override
-        // public String toString() {
-        // return "" + value;
-        // }
     }
 
-    private Node<T> root;
+    private Node root;
 
     public void populate(Scanner scanner) {
         System.out.println("Enter the root node value: ");
-        Object val = scanner.nextLine();
+        int val = scanner.nextInt();
         this.root = new Node(val);
         populate(this.root, scanner);
     }
 
-    private void populate(Node<T> node, Scanner scanner) {
-        // System.out.println("Do you want to enter the left child of " + node.value + "
-        // ?");
-        // boolean goLeft = scanner.nextBoolean();
-        // if (goLeft) {
-        System.out.println("Enter value of the left child " + node.value + " : ");
-        Object val = scanner.nextLine();
-        if (!val.toString().isEmpty()) {
+    private void populate(Node node, Scanner scanner) {
+        System.out.println("Do you want to enter the left child of " + node.value + "?" + "\t(true/false)");
+        boolean goLeft = scanner.nextBoolean();
+        if (goLeft) {
+            System.out.println("Enter value of the left child " + node.value + " : ");
+            int val = scanner.nextInt();
             node.leftNode = new Node(val);
             populate(node.leftNode, scanner);
         }
-        // }
-        // boolean goRight = scanner.nextBoolean();
-        // if (goRight) {
-        System.out.println("Enter value of the right child " + node.value + " : ");
-        Object val2 = scanner.nextLine();
-        if (!val2.toString().isEmpty()) {
+        System.out.println("Do you want to enter the right child of " + node.value + "?" + "\t(true/false)");
+        boolean goRight = scanner.nextBoolean();
+        if (goRight) {
+            System.out.println("Enter value of the right child " + node.value + " : ");
+            int val2 = scanner.nextInt();
             node.rightNode = new Node(val2);
-            populate(node.rightNode, scanner);5
+            populate(node.rightNode, scanner);
         }
-        // }
     }
 
     public void display() {
-        display(this.root, "");
+        display(this.root, "Root");
     }
 
-    private void display(Node<T> node, String indent) {
+    private void display(Node node, String detail) {
         if (node == null) {
             return;
         }
-        System.out.println(indent + node.value);
-        display(node.leftNode, indent + "\t");
-        display(node.rightNode, indent + "\t");
-
+        System.out.println(detail + " : " + node.value);
+        display(node.leftNode, "Left of " + node.value);
+        display(node.rightNode, "Right of " + node.value);
     }
 
-    // public void prettyDisplay() {
-    //     prettyDisplay(this.root, 0);
-    // }
+    public void prettyDisplay() {
+        prettyDisplay(this.root, 0);
+    }
 
-    // private void prettyDisplay(Node<T> node, int level) {
-    //     if (node == null) {
-    //         return;
-    //     }
+    private void prettyDisplay(Node node, int level) {
+        if (node == null) {
+            return;
+        }
 
-    //     prettyDisplay(node.rightNode, level + 1);
+        prettyDisplay(node.rightNode, level + 1);
 
-    //     if (level != 0) {
-    //         for (int i = 0; i < level - 1; i++) {
-    //             System.out.print("|\t\t");
-    //         }
-    //         System.out.println("|------->" + node.value);
-    //     } else {
-    //         System.out.println(node.value);
-    //     }
-    //     prettyDisplay(node.leftNode, level + 1);
-    // }
+        if (level != 0) {
+            for (int i = 0; i < level - 1; i++) {
+                System.out.print("|\t\t");
+            }
+            System.out.println("|------->" + node.value);
+        } else {
+            System.out.println(node.value);
+        }
+        prettyDisplay(node.leftNode, level + 1);
+    }
 
 }
