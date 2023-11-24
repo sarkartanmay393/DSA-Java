@@ -6,7 +6,7 @@ public class NRM {
         //System.out.println(Math.sqrt(16));
     }
 
-    //Newton Raphson Method of Square Root
+    // Newton Raphson Method of Square Root
     static double sqrt(double n) {
         double x = n;
 /*      x --> assumed root, at first we start with the number
