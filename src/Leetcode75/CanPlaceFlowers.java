@@ -1,5 +1,7 @@
 package Leetcode75;
 
+import java.util.Arrays;
+
 // 605
 // https://leetcode.com/problems/can-place-flowers/submissions/1104230197/?envType=study-plan-v2&envId=leetcode-75
 
@@ -8,8 +10,12 @@ public class CanPlaceFlowers {
     int flowerbed[] = { 1, 0, 0, 0, 1, 0, 0 };
     int n = 2;
 
-    System.out.println(canPlaceFlowers(flowerbed, n));
+    String s = "sd";
+    String t = "sd";
 
+    char[] sd = s.toCharArray();
+
+    System.out.println(canPlaceFlowers(flowerbed, n));
   }
 
   public static boolean canPlaceFlowers(int[] flowerbed, int n) {
@@ -31,6 +37,9 @@ public class CanPlaceFlowers {
         }
       }
     }
+
+    String s= "";
+    s.toCharArray()
 
     return cutoff <= 0 && true;
   }

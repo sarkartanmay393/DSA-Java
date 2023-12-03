@@ -6,6 +6,7 @@ package Leetcode75;
 public class GCDofString {
   public static void main(String[] args) {
     System.out.println(gcdOfStrings("ABCABCABC", "ABC"));
+    
   }
 
   public static String gcdOfStrings(String str1, String str2) {
